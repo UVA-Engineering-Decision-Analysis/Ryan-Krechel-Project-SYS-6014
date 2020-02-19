@@ -101,6 +101,13 @@ The model will find the utility function for each particular action and pick the
 
 ## NOTES
 
+  **1. I am struggling to figure out the LaTex methods for the markdown code. I want to include some equations, but they look ugly right now. I will revise them for the next iteration.**
+  
+  **2. I have been confused in the use of variables in class. I understand the methods and definitions in english, but get lost when we write variables on the board. In this document, all of the information is given in English. When we have our meetings about the projects, I want to discuss proper variable naming with you.**
+  
+  **3. Unfortunatley, my decision making process does not actually work. The code is correct, but I am unable to find returns using my strategy and method that beat a typical hands-off buy-and-hold approach. Perhaps it is because my sample size is too small - perhaps it is because timing the market is actually impossible - if it were easy this probably would have been done before. I will keep working on my analysis but I want to discuss with you the possibility of having a result that doesn't actually improve performance from the benchmark.**
+  
+
 ## MATLAB CODE
 ```matlab
 
