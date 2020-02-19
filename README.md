@@ -72,18 +72,6 @@ _The relevant payoffs that could result from the action. Payoffs will be a funct
 
 The payoffs will change based on the data set being observed and will be calculated directly using the historical data. For instance, in a situation where data from 2008 to 2019 is used, up to 12 different data points will exist for each calendar day (depending on where weekends fall because weekends are non-trading days with no data). For each calendar day, the data points will be separated by positive, negative, and net-zero return. The positive days will be averaged to find the positive payoff, and the negative days will be averaged to find the negative payoff.
 
-Here is an example from data collected from 2008 to 2019 for January 2, the first trading day of the year.
-
-
-| Decision        | Avg Pos Return | Percent Pos Return |Avg Neg Return | Percent Neg Return |
-| :-------------: |:-------------:| :-----:             |:-------------:| :-----:|
-| Invest in VTI   | 1.32          |67                |-0.62          |33   |
-| Invest in VXF   | 0.95          |67               |-0.63          |33   |
-| Invest in VBK   | 1.37          |50                |-0.64          |50   |
-| Invest in VEA   | 0.87          |50               |-0.64          |33   |
-| Invest in VWO   | 1.48          |67               |-1.49          |33   |
-| Invest in VPU   | 0.92          |50               |-1.18          |50   |
-| Invest in BLV   | 0.31          |67               |-1.52          |33   |
 
 
 ### UTILITY FUNCTION
@@ -92,7 +80,18 @@ _The decision-maker's utility function or loss function._
 
 Here is a sample utility function for choosing to invest in VTI on Feb 2:  
 $$EU(VTI_Feb2)=(AvgPosReturn_Feb2) \cdot (PercPosReturn_Feb2) + (AvgNegReturn_Feb2) \cdot (PercNegReturn_Feb2)$$
-$$EU(VTIFeb2)=1.32 \times 0.67 + -0.62 \times 0.33$$
+
+Here is an example from data collected from 2008 to 2019 for January 2, the first trading day of the year.
+
+| Decision        | Avg Pos Return | Percent Pos Return |Avg Neg Return | Percent Neg Return | Estimated Utility |
+| :-------------: |:-------------:| :-----:             |:-------------:| :-----:| :-----:|
+| Invest in VTI   | 1.32          |67                |-0.62          |33   | 0.6752 |
+| Invest in VXF   | 0.95          |67               |-0.63          |33   | 0.4215 |
+| Invest in VBK   | 1.37          |50                |-0.64          |50   | 0.3652 |
+| Invest in VEA   | 0.87          |50               |-0.64          |33   | 0.2235 |
+| Invest in VWO   | 1.48          |67               |-1.49          |33   | 0.4875 |
+| Invest in VPU   | 0.92          |50               |-1.18          |50   | -0.1283 |
+| Invest in BLV   | 0.31          |67               |-1.52          |33   | -0.2965 |
 
 It is important to note that the chance of VTI returning positive and the chance of VTI returning negative will no necessarily add up to 1. There is a chance of VTI returning 0 return, and I will be sure to include this if it shows up in the data.
 
@@ -100,6 +99,6 @@ It is important to note that the chance of VTI returning positive and the chance
 
 _The rule the decision-maker will use to choose a preferred action a∗ from the menu A of possible actions._
 
-The model will find the utility function for each particular action and pick the action with the highest utility.
+The model will find the utility function for each particular action and pick the action with the highest utility for each day of the year.
 
 ### NOTES
